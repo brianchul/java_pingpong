@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.view.loginViewController">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="welcome" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome">
+               <VBox.margin>
+                  <Insets left="30.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox spacing="7.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="player1" strokeType="OUTSIDE" strokeWidth="0.0" text="player1" />
+            <TextField fx:id="p1U" alignment="CENTER" promptText="username" />
+            <PasswordField fx:id="p1P" alignment="CENTER" promptText="password" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Region prefHeight="30.0" prefWidth="65.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="p1LG" mnemonicParsing="false" onAction="#p1LGclick" text="Login" />
+                  <Button fx:id="p1C" mnemonicParsing="false" onAction="#p1Cclick" onMouseClicked="#p1Cclick" text="Create" />
+                  <Region prefHeight="30.0" prefWidth="70.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="p1L" />
+               </children>
+            </HBox>
+            <Text fx:id="player2" strokeType="OUTSIDE" strokeWidth="0.0" text="player2" />
+            <TextField fx:id="p2U" alignment="CENTER" promptText="username" />
+            <PasswordField fx:id="p2P" alignment="CENTER" promptText="password" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Region prefHeight="30.0" prefWidth="60.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="p2LG" mnemonicParsing="false" onAction="#p2LGclick" text="Login" />
+                  <Button fx:id="p2C" mnemonicParsing="false" onAction="#p2Cclick" text="Create" />
+                  <Region prefHeight="30.0" prefWidth="67.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="p2L" />
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <VBox prefHeight="70.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox>
+               <children>
+                  <HBox>
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Button fx:id="playButton" mnemonicParsing="false" onAction="#playGame" text="Play Game" />
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="0.0" prefWidth="500.0">
+                     <children>
+                        <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                        <Label fx:id="playL" />
+                        <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

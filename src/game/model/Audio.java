@@ -1,13 +1,15 @@
+package game.model;
+
+import game.gameMain;
 import javafx.scene.media.AudioClip;
 
 public class Audio {
 	
 	AudioClip Audio ;
 	
-
-	public Audio(String loc) {
-		Audio = new AudioClip(getClass().getResource(loc).toString());
-
+	public Audio(int times,String loc) {
+		Audio = new AudioClip(gameMain.class.getResource(loc).toString());
+		Audio.setCycleCount(times);
 		Audio.setVolume(0.5f);
 	}
 	
@@ -19,13 +21,6 @@ public class Audio {
 		Audio.stop();
 	}
 	
-	public void cycleCountINF() {
-		Audio.setCycleCount(AudioClip.INDEFINITE);
-	}
-	
-	public void cycleCount(int x) {
-		Audio.setCycleCount(x);
-	}
 	public boolean isPlaying() {
 		return Audio.isPlaying();
 	}

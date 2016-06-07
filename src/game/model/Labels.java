@@ -1,3 +1,5 @@
+package game.model;
+
 import javafx.scene.control.Label;
 import javafx.scene.paint.Paint;
 
@@ -8,12 +10,13 @@ public class Labels {
 		label = new Label(text);
 		label.setLayoutX(x);
 		label.setLayoutY(y);
-	}
 
-	public void TextFill(Paint paint) {
-		label.setTextFill(paint);
 	}
-
+	
+	public Label getShape(){
+		return label;
+	}
+	
 	public void SetText(String text) {
 		label.setText(text);
 	}
@@ -32,5 +35,9 @@ public class Labels {
 
 	public void SetLayoutY(double y) {
 		label.setLayoutY(y);
+	}
+	
+	public void TextFill(Paint paint) {
+		label.setTextFill(paint);
 	}
 }
